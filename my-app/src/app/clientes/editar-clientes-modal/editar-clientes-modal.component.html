@@ -1,0 +1,32 @@
+<div class="container">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Nombre Cliente</mat-label>
+      <input matInput [value]="data.nombre" [(ngModel)]="data.cliente_nombre" />
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Apellido Cliente</mat-label>
+      <input matInput [value]="data.apellido" [(ngModel)]="data.cliente_apellido" />
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Telefono Cliente</mat-label>
+        <input matInput [value]="data.telefono" [(ngModel)]="data.cliente_telefono" />
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Email Cliente</mat-label>
+        <input matInput [value]="data.email" [(ngModel)]="data.cliente_email" />
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Estado Cliente</mat-label>
+        <mat-select [value]="data.estado" [(ngModel)]="data.cliente_activo">
+          <mat-option value= 1 >Activo</mat-option>
+          <mat-option value= 0 >Inactivo</mat-option>
+        </mat-select>
+        <!--<input matInput [value]="data.estado" [(ngModel)]="data.cliente_activo" />-->
+    </mat-form-field>
+    <div align="center">
+      <button mat-raised-button color="warn" (click)="cancelModal()">
+        Cancelar
+      </button>
+      <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Ok</button>
+    </div>
+</div>
